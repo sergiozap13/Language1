@@ -72,7 +72,7 @@ public:
      * index is not equals to 0 or 1
      * @return A const reference to the character at the given position
      */
-    const char& at(int index) const;
+    const char& at(int &index) const;
     
     /**
      * @brief Gets a reference to the character at the given position
@@ -81,10 +81,10 @@ public:
      * index is not equals to 0 or 1
      * @return A reference to the character at the given position
      */    
-    char& at(int index);
+    char& at(int &index);
     
     /**
-     * Converts lowercase letters in this bigram to uppercase. Modifier method
+     * @brief Converts lowercase letters in this bigram to uppercase. Modifier method
      */
     void toUpper();
  
@@ -109,7 +109,7 @@ private:
 bool isValidCharacter(char character, const std::string& validCharacters);
 
 /**
- * Converts uppercase letters in the given bigram to lowercase
+ * @brief Converts uppercase letters in the given bigram to lowercase
  * @param bigram
  */
 void toLower(Bigram &bigram);

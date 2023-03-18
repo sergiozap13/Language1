@@ -26,7 +26,7 @@ Bigram::Bigram(const std::string& text) {
     
 }
 
-Bigram::Bigram(char first, char second) {
+Bigram::Bigram(char first,char second){
     this->_text[0] = first;
     this->_text[1] = second;
 }
@@ -49,7 +49,7 @@ std::string Bigram::toString() const{
     return this->_text;
 }
 
-const char& Bigram::at(int index) const{
+const char& Bigram::at(int &index) const{
     if(index < 0 || index > 1){
         throw std::out_of_range("const char Bigram::at(int index) invalid position (" + std::to_string(index) + ")"
                     + " and it can only be 0 or 1");
@@ -58,7 +58,7 @@ const char& Bigram::at(int index) const{
     }     
 }
 
-char& Bigram::at(int index){
+char& Bigram::at(int &index){
     if(index < 0 || index > 1){
         throw std::out_of_range("char Bigram::at(int index) invalid position (" + std::to_string(index) + ")"
                     + " and it can only be 0 or 1");
@@ -68,13 +68,13 @@ char& Bigram::at(int index){
 }
 
 void Bigram::toUpper(){
-//    int tam = bigram.getText().length();
-//    
-//    for (int i = 0; i < tam; i++){
-//        if(islower(bigram.at(i))){
-//            bigram.at(i) = std::toupper(bigram.at(i)); 
-//        }
-//    }
+    int tam = strlen(_text);
+    
+    for (int i = 0; i < tam; i++){
+        if(islower(_text[i])){
+            _text[i] = std::toupper(_text[i]); 
+        }
+    }
 }
 
 bool isValidCharacter(char character, const std::string& validCharacters){
@@ -84,16 +84,6 @@ bool isValidCharacter(char character, const std::string& validCharacters){
     }
     
     return false;
-}
-
-void toUpper(Bigram &bigram){
-    int tam = bigram.getText().length();
-    
-    for (int i = 0; i < tam; i++){
-        if(islower(bigram.at(i))){
-            bigram.at(i) = std::toupper(bigram.at(i)); 
-        }
-    }
 }
 
 void toLower(Bigram &bigram){
