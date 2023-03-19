@@ -13,6 +13,8 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
         <gdb_options>
           <DebugOptions>
           </DebugOptions>
@@ -24,22 +26,18 @@
       </nativedebugger>
       <runprofile version="9">
         <runcommandpicklist>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/Simple_Text.txt
-</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/SimpleText.txt
-
-"${OUTPUT_PATH}" &lt; data/SimpleText_no.txt
-
-"${OUTPUT_PATH}" &lt; data/numeros.txt</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/SimpleText.txt  "${OUTPUT_PATH}" &lt; data/SimpleText_no.txt  "${OUTPUT_PATH}" &lt; data/numeros.txt</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/Simple_Text.txt </runcommandpicklistitem>
-          <runcommandpicklistitem> "${OUTPUT_PATH}" &lt; data/SimpleText_no.txt  </runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/SimpleText_no.txt</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/numeros.txt</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/SimpleText.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/SimpleTextbigrams.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/30bigrams.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/30bigrams2.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; BodasdeSangre_FedericoGarciaLorca.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; BodasdeSangre_FedericoGarciaLorca_bigrams.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/BodasdeSangre_FedericoGarciaLorca_bigrams.txt</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" &lt; data/quijotebigrams.txt</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <runcommand>"${OUTPUT_PATH}" &lt; data/quijotebigrams.txt</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>
