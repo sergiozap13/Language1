@@ -34,7 +34,7 @@ public:
      * Query method
      * @return A const reference to the Bigram of this BigramFreq object
      */
-    Bigram getBigram();
+    const Bigram &getBigram();
 
     /**
      * @brief Gets the frequency of this BigramFreq object
@@ -48,7 +48,7 @@ public:
      * Modifier method
      * @param bigram The new Bigram value for this object. Input parameter
      */
-    void setBigram(Bigram bigram);
+    void setBigram(const Bigram &bigram);
 
     /**
      * @brief Sets the frequency of this BigramFreq object. Modifier method.
