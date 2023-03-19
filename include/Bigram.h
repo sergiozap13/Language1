@@ -72,7 +72,7 @@ public:
      * index is not equals to 0 or 1
      * @return A const reference to the character at the given position
      */
-    const char& at(int &index) const;
+    const char& at(int index) const;
     
     /**
      * @brief Gets a reference to the character at the given position
@@ -81,7 +81,7 @@ public:
      * index is not equals to 0 or 1
      * @return A reference to the character at the given position
      */    
-    char& at(int &index);
+    char& at(int index);
     
     /**
      * @brief Converts lowercase letters in this bigram to uppercase. Modifier method
